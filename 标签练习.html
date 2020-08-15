@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 元素选择器 */
+        div{
+            /* background-color:red */
+        }
+        #idming{
+          
+            transform-style:preserve-3d
+        }
+        /* id选择器 */
+       li:nth-child(3):hover{
+            height: 1000px;
+               background-color:green;
+            
+               transform:rotateX(45deg);
+                  transition:all 1s
+        }
+         /* class选择器 */
+         .classname{
+             background-color:pink
+         }
+         .classname:hover{
+             background-color:red ;
+             transition:all 1s
+         }
+         .classname:active{
+             background-color:green;
+             transition:all 1s
+         }
+         a:link{
+            color:pink;
+            text-decoration: none;
+         }
+         a:visited{
+             color:green
+         }
+         a:hover{
+             color:red;
+             cursor: pointer;
+         }
+         a:active {
+             color:yellow
+         }
+         li:nth-child(2){
+             background-color:#000
+         }
+         .dong{
+            width: 100px;
+             height: 300px;
+             perspective:900px;
+             transform-style:preserve-3d;
+             float: left;
+             position: relative;
+             left: 50%;
+         }
+         .da{
+             perspective:900px;
+             transform-style:preserve-3d
+         }
+     
+         .donghu{
+            width: 100px;
+             height: 300px;
+            background-color:red;
+            position:absolute;
+              transform:rotateX(45deg);
+        
+         }
+         .dongqilai{
+            width: 100px;
+             height: 300px;
+            background-color:red;
+          position:absolute;
+          transform-origin:center left;
+          transform: rotateX(45deg) rotateY(-90deg) ;
+      }
+      .dongzai{
+        width: 100px;
+             height: 300px;
+            background-color:red;
+          position:absolute;
+          transform-origin:center right;
+          transform: rotateX(45deg) rotateY(90deg) ;
+      }
+      .dongshang{
+        width: 100px;
+             height: 300px;
+            background-color:red;
+          position:absolute;
+          transform-origin:center right;
+          transform: rotateX(45deg) translateZ(100px);
+      }
+         .dong:hover{
+             transform:rotateY(360deg);
+      
+             transition:all 8s
+         }
+         .dongxiaoa{
+            width: 100px;
+             height: 100px;
+            background-color:green;
+          position:absolute;
+          
+          transform: rotateX(45deg) ;
+         }
+         .sanjiao{
+             box-sizing: border-box;
+             width: 100px;
+             height: 100px;
+             border-top:100px solid transparent;
+             border-left:100px solid transparent;
+             border-right:100px solid yellow;
+             border-bottom:100px solid #000 
+
+         }
+         .banyuan{
+             width: 100px;
+             height: 50px;
+             box-sizing: border-box;
+        
+             background-color:red;
+             border-top-right-radius: 100px;
+             border-top-left-radius: 100px;
+             position:absolute;
+             top:0;
+             left:0;
+             transform:translateX(0);
+          
+             animation: go 5s  linear
+         }
+         @keyframes go{
+               from {
+                top:0;
+             left:0;
+               }
+               to{
+                top:100px;
+             left:100px;
+               }
+         }
+    </style>
+</head>
+<body>
+    <div>你好</div>
+    <ul id="idming">
+        <li class="classname">你好</li>
+        <li>你好</li>
+        <li>你好</li>
+        <li>你好</li>
+        <li>你好</li>
+    </ul>
+    <div>
+        <a href="#">你好</a>
+        <a href="www.baidu.com">你好</a>
+    </div>
+    <div class="da"> 
+    <div class="dong">
+        <div class="donghu"></div>
+        <div class="dongqilai"></div>
+        <div class="dongzai"></div>
+        <div class="dongshang"></div>
+        <div class="dongxiaoa"></div>
+        <div class="dongxiaob"></div>
+        
+    </div>
+     </div>
+   <div class="sanjiao">
+
+   </div>
+   <div class="banyuan">
+
+   </div>
+</body>
+</html>
